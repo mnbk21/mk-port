@@ -72,9 +72,12 @@
     }
 
     p {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.9em;
       font-size: clamp(16px, 3vw, 17px);
       line-height: 1.7;
     }
+  }
+  &__txtLink:hover {
+    text-decoration: underline;
   }
 }
