@@ -77,7 +77,20 @@
       line-height: 1.7;
     }
   }
-  &__txtLink:hover {
+  &__txtLink {
     text-decoration: underline;
+  }
+  &__txtLink:after {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border: 1px variable.$text-base-color solid;
+    border-top: 3px variable.$text-base-color solid;
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+    border-radius: 1px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
   }
 }

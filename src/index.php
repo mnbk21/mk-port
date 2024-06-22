@@ -64,7 +64,7 @@
       </section>
 
       <!--レスポンシブサイト-->
-      <section id="page-scroll1" class="p-product-area">
+      <section id="page-scroll2" class="p-product-area">
         <h2 class="c-common-ttl">
           <span>RESPONSIVE</span>
           <span></span>
@@ -106,7 +106,7 @@
       </section>
 
       <!--ANIMATION LP-->
-      <section id="page-scroll2" class="p-product-area">
+      <section id="page-scroll3" class="p-product-area">
         <h2 class="c-common-ttl">
           <span>ANIMATION LP</span>
           <span></span>
@@ -147,7 +147,7 @@
       </section>
 
       <!--LP DESIGN-->
-      <section id="page-scroll3" class="p-product-area">
+      <section id="page-scroll4" class="p-product-area">
         <h2 class="c-common-ttl">
           <span>LP DESIGN</span>
           <span></span>

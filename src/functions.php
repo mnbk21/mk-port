@@ -154,46 +154,46 @@ function create_post_type(){
     ]);
 
     /*人物加工*/
-    register_post_type('retouch', [ // 投稿タイプ名の定義
-        'labels' => [
-        'name' => '人物加工', // 管理画面上で表示する投稿タイプ名
-        'singular_name' => 'retouch', // カスタム投稿の識別名
-        'add_new' => '新規人物加工追加',
-        'edit_item' => '人物加工の編集',
-        'view_item' => '人物加工を表示',
-        'search_items' => '人物加工を検索',
-        'not_found' => '人物加工は見つかりませんでした。',
-        'not_found_in_trash' => 'ゴミ箱に人物加工はありませんでした。',
-        ],
-        'public' => true, // 投稿タイプをpublicにするか
-        'has_archive' => true, // アーカイブ機能ON/OFF
-        'menu_position' => 5, // 管理画面上での配置場所(投稿の下に配置)
-        'show_in_rest' => true, // wordpress5.x系から出てきた新エディタ「Gutenberg」を有効にする
-        'supports' => array('title', 'editor', 'thumbnail', 'author', 'custom-fields', 'comments', 'revisions'), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
-        'taxonomies' => array('rental_cat', 'rental_tag', 'category', 'post_tag'), //使用するタクソノミーを指定（カテゴリー/category やタグ/post_tag も追加）
-        'exclude_from_search' => false, // false 検索対象に含める
-    ]);
+    // register_post_type('retouch', [ // 投稿タイプ名の定義
+    //     'labels' => [
+    //     'name' => '人物加工', // 管理画面上で表示する投稿タイプ名
+    //     'singular_name' => 'retouch', // カスタム投稿の識別名
+    //     'add_new' => '新規人物加工追加',
+    //     'edit_item' => '人物加工の編集',
+    //     'view_item' => '人物加工を表示',
+    //     'search_items' => '人物加工を検索',
+    //     'not_found' => '人物加工は見つかりませんでした。',
+    //     'not_found_in_trash' => 'ゴミ箱に人物加工はありませんでした。',
+    //     ],
+    //     'public' => true, // 投稿タイプをpublicにするか
+    //     'has_archive' => true, // アーカイブ機能ON/OFF
+    //     'menu_position' => 5, // 管理画面上での配置場所(投稿の下に配置)
+    //     'show_in_rest' => true, // wordpress5.x系から出てきた新エディタ「Gutenberg」を有効にする
+    //     'supports' => array('title', 'editor', 'thumbnail', 'author', 'custom-fields', 'comments', 'revisions'), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
+    //     'taxonomies' => array('rental_cat', 'rental_tag', 'category', 'post_tag'), //使用するタクソノミーを指定（カテゴリー/category やタグ/post_tag も追加）
+    //     'exclude_from_search' => false, // false 検索対象に含める
+    // ]);
 
     /*動画編集、BGM制作*/
-    register_post_type('movieAndMusic', [ // 投稿タイプ名の定義
-        'labels' => [
-        'name' => '動画編集、BGM制作', // 管理画面上で表示する投稿タイプ名
-        'singular_name' => 'movieAndMusic', // カスタム投稿の識別名
-        'add_new' => '新規動画編集、BGM制作追加',
-        'edit_item' => '動画編集、BGM制作の編集',
-        'view_item' => '動画編集、BGM制作を表示',
-        'search_items' => '動画編集、BGM制作を検索',
-        'not_found' => '動画編集、BGM制作は見つかりませんでした。',
-        'not_found_in_trash' => 'ゴミ箱に動画編集、BGM制作はありませんでした。',
-        ],
-        'public' => true, // 投稿タイプをpublicにするか
-        'has_archive' => true, // アーカイブ機能ON/OFF
-        'menu_position' => 5, // 管理画面上での配置場所(投稿の下に配置)
-        'show_in_rest' => true, // wordpress5.x系から出てきた新エディタ「Gutenberg」を有効にする
-        'supports' => array('title', 'editor', 'thumbnail', 'author', 'custom-fields', 'comments', 'revisions'), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
-        'taxonomies' => array('rental_cat', 'rental_tag', 'category', 'post_tag'), //使用するタクソノミーを指定（カテゴリー/category やタグ/post_tag も追加）
-        'exclude_from_search' => false, // false 検索対象に含める
-    ]);
+    // register_post_type('movieAndMusic', [ // 投稿タイプ名の定義
+    //     'labels' => [
+    //     'name' => '動画編集、BGM制作', // 管理画面上で表示する投稿タイプ名
+    //     'singular_name' => 'movieAndMusic', // カスタム投稿の識別名
+    //     'add_new' => '新規動画編集、BGM制作追加',
+    //     'edit_item' => '動画編集、BGM制作の編集',
+    //     'view_item' => '動画編集、BGM制作を表示',
+    //     'search_items' => '動画編集、BGM制作を検索',
+    //     'not_found' => '動画編集、BGM制作は見つかりませんでした。',
+    //     'not_found_in_trash' => 'ゴミ箱に動画編集、BGM制作はありませんでした。',
+    //     ],
+    //     'public' => true, // 投稿タイプをpublicにするか
+    //     'has_archive' => true, // アーカイブ機能ON/OFF
+    //     'menu_position' => 5, // 管理画面上での配置場所(投稿の下に配置)
+    //     'show_in_rest' => true, // wordpress5.x系から出てきた新エディタ「Gutenberg」を有効にする
+    //     'supports' => array('title', 'editor', 'thumbnail', 'author', 'custom-fields', 'comments', 'revisions'), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
+    //     'taxonomies' => array('rental_cat', 'rental_tag', 'category', 'post_tag'), //使用するタクソノミーを指定（カテゴリー/category やタグ/post_tag も追加）
+    //     'exclude_from_search' => false, // false 検索対象に含める
+    // ]);
 
 
 
