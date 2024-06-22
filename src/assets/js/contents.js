@@ -367,6 +367,14 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'JavaScript',
         class: 'c-tag-javaScript'
       },
+      typeScript: {
+        name: 'TypeScript',
+        class: 'c-tag-typeScript'
+      },
+      react: {
+        name: 'React',
+        class: 'c-tag-react'
+      },
     }
 
     tagList.forEach((elem) => {
@@ -383,6 +391,12 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.javaScript.name:
         elem.classList.add(tagListData.javaScript.class);
+        break;
+        case tagListData.typeScript.name:
+        elem.classList.add(tagListData.typeScript.class);
+        break;
+        case tagListData.react.name:
+        elem.classList.add(tagListData.react.class);
         break;
       }
     });

@@ -29,9 +29,10 @@
         <div class="l-footer-links--sp">
           <a href="" class="l-footer-link--sp">CATEGORY</a>
           <div class="l-footer-links-accord--sp">
-            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">レスポンシブサイト</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">アニメーションLP(スマホサイト)</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">LPデザイン(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">Webアプリケーション</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">レスポンシブサイト</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">アニメーションLP(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll4')); ?>">LPデザイン(スマホサイト)</a>
           </div>
           <a href="<?php echo esc_url(home_url('/about')); ?>">ABOUT</a>
           <a href="<?php echo esc_url(home_url('/contact')); ?>">CONTACT</a>
@@ -41,9 +42,10 @@
         <div class="l-footer-links--pc">
           <section class="l-footer-links__links--pc">
             <h3 class="l-footer-links__ttl--pc">CATEGORY</h3>
-            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">&gt;レスポンシブサイト</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">&gt;アニメーションLP(スマホサイト)</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">&gt;LPデザイン(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">&gt;Webアプリケーション</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">&gt;レスポンシブサイト</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">&gt;アニメーションLP(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll4')); ?>">&gt;LPデザイン(スマホサイト)</a>
           </section>
 
           <section class="l-footer-links__links--pc">

@@ -14,6 +14,58 @@
 
   <main class="l-main--search">
 
+    <!--Webアプリケーション-->
+    <section class="p-product-area">
+      <h2 class="c-common-ttl">
+        <span>Web Application</span>
+        <span></span>
+        <span>Web アプリケーション</span>
+      </h2>
+      <div class="p-product-area__inner">
+        <!--検索結果ループ-->
+        <?php $custom_query = new WP_Query(
+          array(
+          'post_type' => 'web-application',
+          's' => get_search_query()
+          )
+        );
+        ?>
+
+        <?php
+          if ($custom_query->have_posts() ) :
+        ?>
+
+        <?php
+          while ( $custom_query->have_posts() ) :
+          $custom_query->the_post();
+        ?>
+
+        <!--表示させるコンテンツ内容-->
+        <div class="p-product large">
+          <a href="<?php echo esc_url(get_permalink()); ?>" class="p-product__thumb">
+            <picture class="p-product__thumb-img--b">
+              <source media="(max-width:599px)" srcset="<?php echo first_image(); ?>" sizes="100vw" alt="<?php the_title(); ?>" />
+              <img src="<?php echo second_image(); ?>" alt="<?php the_title(); ?>">
+            </picture>
+
+            <div class="p-product__thumb-ttl">
+              <h3 class="p-product__thumb-subttl"><?php the_subtitle(); ?></h3>
+              <h3 class="p-product__thumb-mainttl"><?php the_title(); ?></h3>
+            </div>
+          </a>
+          <div class="c-product-tag-wrap">
+            <?php the_tags('<span class="c-product-tag">' , '</span><span class="c-product-tag">' , '</span>'); ?>
+          </div>
+        </div>
+
+        <?php endwhile; else : ?>
+        <!--コンテンツが無い場合に表示させる内容-->
+
+        <?php endif; ?>
+
+      </div>
+    </section>
+
     <!--レスポンシブサイト-->
     <section class="p-product-area">
       <h2 class="c-common-ttl">

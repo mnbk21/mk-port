@@ -49,9 +49,10 @@
         <nav class="l-slide-nav">
           <section class="l-slide-nav__list">
             <h2 class="l-slide-nav__ttl">CATEGORY</h2>
-            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>" class="l-slide-nav__link">&gt;レスポンシブサイト</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>" class="l-slide-nav__link">&gt;アニメーションLP(スマホサイト)</a>
-            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>" class="l-slide-nav__link">&gt;LPデザイン(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>" class="l-slide-nav__link">&gt;Webアプリケーション</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>" class="l-slide-nav__link">&gt;レスポンシブサイト</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>" class="l-slide-nav__link">&gt;アニメーションLP(スマホサイト)</a>
+            <a href="<?php echo esc_url(home_url('#page-scroll4')); ?>" class="l-slide-nav__link">&gt;LPデザイン(スマホサイト)</a>
           </section>
 
           <section class="l-slide-nav__list">
@@ -99,9 +100,10 @@
       <!--PCのカテゴリーの吹き出し-->
       <div class="l-header-category-txtbox--pc">
         <button class="c-txtbox-closeBtn"></button>
-        <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">&gt;レスポンシブサイト</a>
-        <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">&gt;アニメーションLP(スマホサイト)</a>
-        <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">&gt;LPデザイン(スマホサイト)</a>
+        <a href="<?php echo esc_url(home_url('#page-scroll1')); ?>">&gt;Webアプリケーション</a>
+        <a href="<?php echo esc_url(home_url('#page-scroll2')); ?>">&gt;レスポンシブサイト</a>
+        <a href="<?php echo esc_url(home_url('#page-scroll3')); ?>">&gt;アニメーションLP(スマホサイト)</a>
+        <a href="<?php echo esc_url(home_url('#page-scroll4')); ?>">&gt;LPデザイン(スマホサイト)</a>
       </div>
 
     </div>
