@@ -1,0 +1,80 @@
+/**************************************************************
+
+                        about
+
+**************************************************************/
+@use "../foundation/variable";
+@use "../foundation/mixin";
+
+
+.l-about {
+  width: 86%;
+  margin: 0 auto;
+
+  @include mixin.pc {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+    height: 90vw;
+    margin-bottom: 10%;
+    display: block;
+    object-fit: cover;
+    object-position: center -6vw;
+    overflow: hidden;
+  
+    @include mixin.pc {
+      flex-shrink: 0;
+      width: 310px;
+      height: 368px;
+      margin-right: 50px;
+      object-fit: cover;
+      object-position: center -13px;
+      overflow: hidden;
+    }
+  }
+
+  &__txtbox {
+    margin-bottom: 10%;
+
+    @include mixin.pc {
+      width: 37em;
+    }
+
+    h3 {
+      margin-bottom: 15%;
+
+      @include mixin.pc {
+        margin-bottom: 60px;
+      }
+
+      span {
+        color: #22a0ab;
+        display: block;
+
+        &:first-child {
+          margin-bottom: 2.5%;
+          font-size: clamp(18px, 4.5vw, 19px);
+        }
+
+        &:nth-child(2) {
+          margin-bottom: 1em;
+          font-size: clamp(25px, 4.5vw, 31px);
+        }
+
+        &:last-child {
+          font-size: clamp(13px, 2vw, 16px);
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 0.5em;
+      font-size: clamp(16px, 3vw, 17px);
+      line-height: 1.7;
+    }
+  }
+}

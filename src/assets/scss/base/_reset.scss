@@ -1,0 +1,31 @@
+/*** リセット ***/
+
+/*テキスト突き抜け対策*/
+* { margin:0; padding:0; word-break:break-word; }
+
+/* はみ出し対策 */
+*:after { display:block; clear:both; }
+
+ul {
+	list-style: none;
+}
+
+p, div, section, nav, span, a, input, select, textarea {
+	line-height: 1;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+	font-weight: normal;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	border: none;
+}

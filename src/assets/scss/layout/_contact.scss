@@ -1,0 +1,43 @@
+/**************************************************************
+
+                        contact
+
+**************************************************************/
+@use "../foundation/variable";
+@use "../foundation/mixin";
+
+
+.l-contact {
+  width: 84%;
+  max-width: 450px;
+  margin: 0 auto 36px;
+}
+
+/*入力箇所の横幅とmargin*/
+.l-contact label,
+.wpcf7-form-control-wrap,
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+  width: 100%;
+  margin: 4px 0 18px 0;
+  font-size: clamp(16px, 3vw, 17px);
+  display: block;
+}
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+  padding: 5px 0 5px 4px;
+}
+
+.wpcf7-submit {
+  width: 36%;
+  padding: 10px 0;
+  margin: 26px auto 0 auto;
+  color: #666666;
+  font-size: clamp(16px, 3vw, 17px);
+  background: #dddddd;
+  border: 1px solid #aaaaaa;
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+}

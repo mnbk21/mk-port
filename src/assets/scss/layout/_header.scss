@@ -1,0 +1,372 @@
+/***************************************************************
+
+                        header
+
+***************************************************************/
+@use "../foundation/variable";
+@use "../foundation/mixin";
+
+
+/***** ヘッダー *****/
+.l-header {
+  background: #25acb8;
+  position: relative;
+  z-index: 4;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5px 2.5% 5px 2%;
+    position: relative;
+    overflow: hidden;
+  
+    @include mixin.pc {
+      padding: 76px 26px 32px 94px;
+    }
+
+    &.is-slide {
+      overflow: visible;
+    }
+  }
+}
+
+.l-header-logo-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mixin.pc {
+    margin-bottom: 50px;
+  }
+}
+
+.l-header-logo {
+  width: 154px;
+
+  @include mixin.pc {
+    width: 256px;
+  }
+
+  &__link {
+    line-height: 0;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+/*PCグロナビ*/
+.l-header-nav {
+  display: none;
+
+  @include mixin.pc {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    a:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    a:hover {
+      margin-bottom: -1px;
+      border-bottom: 1px solid #fbf9c4;
+    }
+
+    &__link {
+      color: variable.$text-common-color;
+      font-size: 17px;
+    }
+  }
+
+}
+
+
+/*SPスライドナビ*/
+.l-slide-nav {
+  width: 74%;
+  padding: 7% 3% 11% 6%;
+  background: #1495a0;
+  position: absolute;
+  right: -74%;
+  top: 100%;
+  z-index: 3;
+  transition: 0.5s;
+
+  &.is-slide {
+    right: 0%;
+  }
+
+  &__list {
+    margin-bottom: 18%;
+  }
+
+  &__ttl {
+    margin-bottom: 7%;
+    color: variable.$text-common-color;
+    font-size: clamp(16px, 4vw, 17px);
+  }
+
+  &__link {
+    width: fit-content;
+    margin: 0 0 8% 4%;
+    padding-left: 1em;
+    color: #ffffff;
+    font-size: clamp(15px, 3vw, 16px);
+    text-indent: -1em;
+    line-height: 1.4;
+    display: block;
+  }
+}
+
+/*SP検索フォーム(スライドナビ内)*/
+.l-header-search--sp {
+  width: 80%;
+  position: relative;
+
+  button {
+    width: 19px;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 3% 14% 2% 1%;
+    color: #ffffff;
+    font-size: clamp(15px, 3vw, 16px);
+    background: #1495a0;
+    display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input::placeholder {
+    color: #5bbec6;
+    font-size: clamp(15px, 3vw, 16px);
+  }
+
+  /*inputのautocomplete時のスタイル*/
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 999px #1495a0 inset;
+  }
+}
+
+/*SPの検索フォームの吹き出し*/
+.l-search-txtbox--sp {
+  width: 190px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 15px;
+  background: #097983;
+  border-radius: 4px;
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  bottom: 22%;
+  left: 8%;
+  pointer-events: none;
+  transition: 0.3s;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+
+  &:after {
+    width: 0;
+    content: "";
+    height: 0;
+    border: solid transparent;
+    border-color: rgba(12, 132, 143, 0);
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-color: #097983;
+    pointer-events: none;
+    position: absolute;
+    bottom: -24px;
+    left: 12%;
+  }
+
+  &.is-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  h2 {
+    width: fit-content;
+    margin-bottom: 2.5%;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  span {
+    width: fit-content;
+    padding-left: 1em;
+    font-size: clamp(15px, 2vw, 16px);
+    line-height: 1.2;
+    text-indent: -1em;
+
+    &:not(:last-child) {
+      margin-bottom: 2.5%;
+      display: block;
+    }
+
+    &:last-child {
+      display: inline-block;
+    }
+  }
+}
+
+/*PCのヘッダー下の吹き出しの領域*/
+.l-header-txtboxwrap--pc {
+  display: none;
+
+  @include mixin.pc {
+    width: 800px;
+    height: 0;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+  }
+}
+
+/*PCのヘッダー検索フォームの吹き出し*/
+.l-header-search-txtbox--pc {
+  @include mixin.pc {
+    width: 220px;
+    padding: 19px;
+    color: #ffffff;
+    background: #0c848f;
+    border-radius: 4px;
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    top: -97px;
+    left: 728px;
+    pointer-events: none;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+
+    &.is-show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &:after {
+      content: "";
+      height: 0;
+      width: 0;
+      border: solid transparent;
+      border-color: rgba(12, 132, 143, 0);
+      border-top-width: 13px;
+      border-bottom-width: 13px;
+      border-left-width: 9px;
+      border-right-width: 9px;
+      border-bottom-color: #0c848f;
+      pointer-events: none;
+      position: absolute;
+      top: -26px;
+      left: 29px;
+    }
+
+    h4 {
+      width: fit-content;
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    span {
+      width: fit-content;
+      padding-left: 1em;
+      font-size: 15px;
+      line-height: 1.2;
+      text-indent: -1em;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+        display: block;
+      }
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/*PCのカテゴリーの吹き出し*/
+.l-header-category-txtbox--pc {
+
+  @include mixin.pc {
+    width: 278px;
+    padding: 19px;
+    background: #0c848f;
+    border-radius: 4px;
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    top: -10px;
+    left: 512px;
+    pointer-events: none;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+
+    &.is-show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &:after {
+      content: "";
+      height: 0;
+      width: 0;
+      border: solid transparent;
+      border-color: rgba(12, 132, 143, 0);
+      border-top-width: 13px;
+      border-bottom-width: 13px;
+      border-left-width: 9px;
+      border-right-width: 9px;
+      border-bottom-color: #0c848f;
+      pointer-events: none;
+      position: absolute;
+      top: -26px;
+      left: 36px;
+    }
+
+    a {
+      width: fit-content;
+      padding-left: 1em;
+      color: #FFFFFF;
+      font-size: 15px;
+      line-height: 1.2;
+      text-indent: -1em;
+      display: block;
+
+      &:hover {
+        border-bottom: 1px solid #ffffff;
+      }
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+      &:not(:last-child):hover {
+        margin-bottom: 17px;
+      }
+      &:last-child:hover {
+        margin-bottom: -1px;
+      }
+    }
+  }
+}

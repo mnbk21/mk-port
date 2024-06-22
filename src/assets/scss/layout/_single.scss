@@ -1,0 +1,82 @@
+/**************************************************************
+
+                        single
+
+**************************************************************/
+@use "../foundation/variable";
+@use "../foundation/mixin";
+
+
+.l-detail {
+  width: 87%;
+  margin: 0 auto 18%;
+
+  @include mixin.pc {
+    width: 1100px;
+    margin: 0 auto 70px;
+  }
+
+  &__subttl {
+    width: 100%;
+    height: fit-content;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: clamp(12px, 3vw, 14px);
+    color: variable.$text-subttl-color
+  }
+
+  &__mainttl {
+    width: 100%;
+    height: fit-content;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: clamp(27px, 6.5vw, 32px);
+    margin-bottom: 1em;
+  }
+}
+
+.l-capture-detail {
+  width: 100%;
+  margin-bottom: 5%;
+  display: block;
+
+  &__img img {
+    width: 100%;
+    margin-bottom: 3%;
+    display: block;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/*管理画面から上げた記事内の画像は消す*/
+.wp-block-image {
+  margin: 0 0 1em;
+  display: none;
+}
+
+.l-detail-txt {
+
+  &__flex h3 {
+    width: 30%;
+    margin: 6px 0;
+    color: #8c8342;
+    font-size: clamp(17px, 3vw, 18px);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__flex p, &__flex a {
+    font-size: clamp(16px, 3vw, 17px);
+    line-height: 1.6;
+  }
+
+  &__flex p {
+    margin-bottom: 2em;
+  }
+
+  &__flex a {
+    text-decoration: underline;
+  }
+}
+

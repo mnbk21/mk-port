@@ -1,0 +1,22 @@
+/**************************************************************
+
+                        base
+
+**************************************************************/
+@use "../foundation/variable";
+@use "../foundation/mixin";
+
+
+body {
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+}
+
+/*テキストのベースカラー*/
+body, a {
+  color: variable.$text-base-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
