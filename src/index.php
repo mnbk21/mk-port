@@ -12,7 +12,7 @@
             <span>Front-end Engineer / Designer</span>
           </h2>
           <p class="p-creator__txt">
-            不動産広告代理店、電話占いサイトなどで制作したクリエイティブなどを抜粋して掲載しています。
+            不動産広告代理店、電話占いサイトや個人で制作したWebアプリケーション、クリエイティブなどを抜粋して掲載しています。
           </p>
         </section>
       </div>
