@@ -375,6 +375,11 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'React',
         class: 'c-tag-react'
       },
+      php: {
+        name: 'PHP',
+        class: 'c-tag-php'
+      },
+
     }
 
     tagList.forEach((elem) => {
@@ -397,6 +402,9 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.react.name:
         elem.classList.add(tagListData.react.class);
+        break;
+        case tagListData.php.name:
+        elem.classList.add(tagListData.php.class);
         break;
       }
     });
