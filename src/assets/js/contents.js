@@ -379,6 +379,10 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'PHP',
         class: 'c-tag-php'
       },
+      gemini: {
+        name: 'Gemini',
+        class: 'c-tag-gemini'
+      },
 
     }
 
@@ -405,6 +409,9 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.php.name:
         elem.classList.add(tagListData.php.class);
+        break;
+        case tagListData.gemini.name:
+        elem.classList.add(tagListData.gemini.class);
         break;
       }
     });
