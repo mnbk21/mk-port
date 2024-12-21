@@ -416,6 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.gemini.name:
         elem.classList.add(tagListData.gemini.class);
+        break;
         case tagListData.next.name:
         elem.classList.add(tagListData.next.class);
         break;
