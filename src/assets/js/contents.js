@@ -383,6 +383,10 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Gemini',
         class: 'c-tag-gemini'
       },
+      next: {
+        name: 'Next.js',
+        class: 'c-tag-next'
+      },
 
     }
 
@@ -412,6 +416,8 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.gemini.name:
         elem.classList.add(tagListData.gemini.class);
+        case tagListData.next.name:
+        elem.classList.add(tagListData.next.class);
         break;
       }
     });
