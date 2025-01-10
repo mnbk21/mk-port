@@ -9,6 +9,7 @@
 
 /***** ヘッダー *****/
 .l-header {
+  width: 100%;
   background: #25acb8;
   position: relative;
   z-index: 5;
@@ -18,7 +19,7 @@
     margin: 0 auto;
     padding: 5px 2.5% 5px 2%;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
   
     @include mixin.pc {
       padding: 76px 26px 32px 94px;
@@ -50,6 +51,10 @@
   &__link {
     line-height: 0;
     display: block;
+
+    :hover {
+      opacity: 0.8;
+    }
 
     img {
       width: 100%;
@@ -83,6 +88,69 @@
   }
 
 }
+
+/* PCのヘッダーのスクロール時の処理 */
+
+
+
+
+@include mixin.pc {
+
+  body.scrolled {
+
+    .l-header {
+
+      position: fixed;
+
+      .l-header__inner {
+        padding: 16px 26px 16px 94px;
+      }
+
+      .l-header-logo {
+        width: 130px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .l-header-logo-search {
+        margin-bottom: 0;
+      }
+
+      .c-header-search--pc {
+        width: 142px;
+        position: absolute;
+        right: 40px;
+        top: 10px;
+      }
+
+      .l-header-nav {
+        margin-right: 224px;
+      }
+
+      .l-header-nav__link {
+        font-size: 15px;
+      }
+
+      .l-header-category-txtbox--pc {
+        top: 54px;
+        right: 366px;
+      }
+
+      .l-header-search-txtbox--pc {
+        top: 60px;
+        right: -14px;
+      }
+
+    }
+
+    .p-kv {
+      padding-top: 252px;
+    }
+  }
+
+}
+
+
 
 
 /*SPスライドナビ*/
@@ -234,31 +302,34 @@
 }
 
 /*PCのヘッダー下の吹き出しの領域*/
-.l-header-txtboxwrap--pc {
-  display: none;
+// .l-header-txtboxwrap--pc {
+//   display: none;
 
-  @include mixin.pc {
-    width: 800px;
-    height: 0;
-    margin: 0 auto;
-    position: relative;
-    display: block;
-  }
-}
+//   @include mixin.pc {
+//     width: 800px;
+//     height: 0;
+//     margin: 0 auto;
+//     position: relative;
+//     display: block;
+//   }
+// }
 
 /*PCのヘッダー検索フォームの吹き出し*/
 .l-header-search-txtbox--pc {
+  display: none;
+
   @include mixin.pc {
     width: 220px;
     padding: 19px;
     color: #ffffff;
     background: #0c848f;
     border-radius: 4px;
+    display: block;
     opacity: 0;
     position: absolute;
-    z-index: 4;
-    top: -97px;
-    left: 728px;
+    z-index: 5;
+    top: 160px;
+    right: 20px;
     pointer-events: none;
     transition: 0.3s;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
@@ -281,7 +352,7 @@
       border-bottom-color: #0c848f;
       pointer-events: none;
       position: absolute;
-      top: -26px;
+      top: -25px;
       left: 29px;
     }
 
@@ -313,16 +384,19 @@
 /*PCのカテゴリーの吹き出し*/
 .l-header-category-txtbox--pc {
 
+  display: none;
+
   @include mixin.pc {
     width: 278px;
     padding: 19px;
     background: #0c848f;
     border-radius: 4px;
+    display: block;
     opacity: 0;
     position: absolute;
     z-index: 4;
-    top: -10px;
-    left: 512px;
+    top: 244px;
+    right: 168px;
     pointer-events: none;
     transition: 0.3s;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
@@ -345,7 +419,7 @@
       border-bottom-color: #0c848f;
       pointer-events: none;
       position: absolute;
-      top: -26px;
+      top: -25px;
       left: 36px;
     }
 

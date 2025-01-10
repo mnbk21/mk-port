@@ -35,6 +35,11 @@
 
 /*フッターのロゴ*/
 .l-footer-logo {
+
+  :hover {
+    opacity: 0.9;
+  }
+
   @include mixin.pc {
     width: 25em;
     margin-right: 50px;

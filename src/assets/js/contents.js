@@ -190,9 +190,28 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault();
     });
 
-    /*1000pxスクロールすると、ページ上部にスクロールするボタンが現れる*/
+    
+    /* スクロールした時の処理 */
     window.addEventListener('scroll', function () {
+      let headerKvDom = document.querySelector('.l-header');
+      let headerHeight = document.querySelector('.l-header').clientHeight;
       let scrollDis = window.pageYOffset; //スクロール距離(縦)
+
+
+
+      /* PCでヘッダーの高さ分スクロールすると、ヘッダーが固定になる */
+      if (scrollDis > 200) {
+        document.querySelector('body').classList.add('scrolled');
+        // headerKvDom.forEach((elem) => {
+        //   elem.classList.add('scrolled');
+        // });
+      } else {
+        document.querySelector('body').classList.remove('scrolled');
+        // headerKvDom.forEach((elem) => {
+        //   elem.classList.add('scrolled');
+        // });
+      }
+      /*1000pxスクロールすると、ページ上部にスクロールするボタンが現れる*/
       if (scrollDis > 1000) {
         toppageBtn.classList.add(classIsShow);
       } else {
@@ -217,6 +236,11 @@ document.addEventListener('DOMContentLoaded', function() {
     headerNavLinkTxtbox.addEventListener('mouseover', function(event) {
       headerCategoryTxtboxPc.classList.add(classIsShow);
       headerSearchTxtboxPc.classList.remove(classIsShow); // カテゴリーの吹き出しは消す
+    });
+
+    // PCのヘッダーのカテゴリーのホバーが外れたら消す
+    headerCategoryTxtboxPc.addEventListener('mouseleave', function(event) {
+      headerCategoryTxtboxPc.classList.remove(classIsShow);
     });
 
     headerNavLinkTxtbox.addEventListener('click', function(event) {
@@ -248,9 +272,9 @@ document.addEventListener('DOMContentLoaded', function() {
             block: 'start',
             inline: 'center'
           });
-          setTimeout(function(){
+          // setTimeout(function(){
             headerCategoryTxtboxPc.classList.remove(classIsShow); //PCのヘッダーのカテゴリーの吹き出しを消す
-          }, 200);
+          // }, 200);
           event.preventDefault();
         });
       });
