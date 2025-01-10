@@ -323,6 +323,12 @@
   }
 }
 
+.scrolled .c-main--common {
+  @include mixin.pc {
+    padding-top: 332px;
+  }
+}
+
 .c-common-area {
   @include mixin.pc {
     max-width: none;
