@@ -90,8 +90,8 @@
   }
 
   @include mixin.pc {
-    width: 66px;
-    padding-bottom: 66px;
+    width: 62px;
+    padding-bottom: 62px;
     bottom: 30px;
     right: 20px;
   }
@@ -111,8 +111,8 @@
   pointer-events: none;
 
   @include mixin.pc {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin-top: 3px;
   }
 }
