@@ -101,6 +101,10 @@
     bottom: 34px;
   }
 
+  &:active {
+    transform: scale(0.6, 0.6) 
+  }
+
 }
 
 .c-toppage-btn::before {
