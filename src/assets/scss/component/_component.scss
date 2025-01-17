@@ -331,6 +331,23 @@
   background: #000000;
 }
 
+.c-tag-wordpress {
+  background: #555555;
+  position: relative;
+}
+
+.c-tag-wordpress:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 86%;
+  display: block;
+  border: 1px solid #ffffff;
+}
+
 
 
 

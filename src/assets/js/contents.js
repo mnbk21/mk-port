@@ -411,6 +411,10 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Next.js',
         class: 'c-tag-next'
       },
+      wordpress: {
+        name: 'wordPress',
+        class: 'c-tag-wordpress'
+      },
 
     }
 
@@ -443,6 +447,9 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         case tagListData.next.name:
         elem.classList.add(tagListData.next.class);
+        break;
+        case tagListData.wordpress.name:
+        elem.classList.add(tagListData.wordpress.class);
         break;
       }
     });
