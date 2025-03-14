@@ -1,3 +1,10 @@
+<?php
+/**
+Template Name:page-about
+***/
+?>
+
+<!--ヘッダー部-->
 <?php get_header(); ?>
 
   <!--メイン部-->

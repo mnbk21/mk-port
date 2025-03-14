@@ -1,3 +1,9 @@
+<?php
+/**
+Template Name:page-contact
+***/
+?>
+
 <!--ヘッダー部-->
 <?php get_header(); ?>
 
